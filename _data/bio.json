@@ -2,7 +2,7 @@
   "basics": {
     "name": "Suraj Thapa",
     "label": "ML Engineer | MLops Engineer",
-    "picture": "https://github.com/thap2331/thap2331.github.io/blob/main/_data/suraj-linked-in-profile.jpeg",
+    "picture": "./suraj-profile.jpeg",
     "email": "surazmah@gmail.com",
     "phone": "208-310-4215",
     "website": "https://thap2331.github.io",
@@ -16,8 +16,7 @@
   "interests": [
     { "name": "Machine Learning" },
     { "name": "LLMs/RAGs/Fine tuning LLMs/NLP/" },
-    { "name": "Computer Vision" },
-    { "name": "Robotics" }
+    { "name": "Computer Vision" }
   ],
   "skills": [
     {
