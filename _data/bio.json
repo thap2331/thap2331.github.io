@@ -9,8 +9,8 @@
     "summary": "I am a Machine Learning Enginner who is very passionate about solving business problems using technology.",
     "location": { "address": "", "postalCode": "63117", "city": "St. Louis", "countryCode": "USA", "region": "Missouri" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "https://github.com/thap2331" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "https://www.linkedin.com/in/suraj-thapa-working-for-community/" }
+      { "network": "github", "username": "thap2331", "url": "https://github.com/thap2331" },
+      { "network": "linkedin", "username": "suraj", "url": "https://www.linkedin.com/in/suraj-thapa-working-for-community/" }
     ]
   },
   "interests": [
@@ -21,29 +21,38 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "Python", "Bash",]
+      "keywords": [ "Python", "Bash"]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "name": "Toolsets",
+      "keywords": [ "Ubuntu", "Git/GitHub/GitLab" ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "institution": "University of Denver, Denver, CO",
+      "area": "Global Economic Affairs (2021)",
+      "studyType": "M.A.",
+      "startDate": "2018-08-01",
+      "endDate": "2021-05-01",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "University of Idaho, Moscow, ID",
+      "area": "Bachelor in Economics; Minor in Math and Statistics (May, 2018)",
+      "studyType": "B.A.",
+      "startDate": "2018-08-01",
+      "endDate": "2021-08-01",
       "courses": [
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
+      "company": "The Texas Tribune",
+      "position": "Machine Learning Engineer",
+      "website": "https://www.texastribune.org/",
       "startDate": "2015-08-01",
       "endDate": "Present",
       "summary": "Head of online presence for Ka Leo",
