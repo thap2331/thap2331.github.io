@@ -1,31 +1,28 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "name": "Suraj Thapa",
+    "label": "ML Engineer | MLops Engineer",
+    "picture": "https://github.com/thap2331/thap2331.github.io/blob/main/_data/suraj-linked-in-profile.jpeg",
+    "email": "surazmah@gmail.com",
+    "phone": "208-310-4215",
+    "website": "https://thap2331.github.io",
+    "summary": "I am a Machine Learning Enginner who is very passionate about solving business problems using technology.",
+    "location": { "address": "", "postalCode": "63117", "city": "St. Louis", "countryCode": "USA", "region": "Missouri" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "mmaluhia", "url": "https://github.com/thap2331" },
+      { "network": "linkedin", "username": "mollymaluhia", "url": "https://www.linkedin.com/in/suraj-thapa-working-for-community/" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
+    { "name": "Machine Learning" },
+    { "name": "LLMs/RAGs/Fine tuning LLMs/NLP/" }
+    { "name": "Computer Vision" },
     { "name": "Robotics" },
-    { "name": "3D Graphics" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "Python", "Bash",]
     },
     {
       "name": "Toolsets/OS",
