@@ -6,15 +6,20 @@ title: "Efficient classification with vector embeddings"
 date: 2025
 published: true
 labels:
-  - retrieval-augmented-generation 
-  - vector-database 
-  - postgresql 
-  - machine-learning 
-  - pgvector 
-  - docker
-  - hybrid-search 
-  - add-recency-in-hybrid-search
+  - tagging
+  - classification
+  - vector-database
+  - aws
+  - machine-learning
+  - ai
+  - aws-lambda
+  - aws-cloudformation
+  - aws-sam
+  - huggingface
+  - pinecone
+
 summary: "This project enables automatic text classification using Large Language Models (LLMs), eliminating the need for traditional model-building approaches. It classifies any given text into predefined categories, making it particularly useful for organizing house renovation or rehabilitation expenses."
+
 ---
 
 <div class="text-center p-4">
