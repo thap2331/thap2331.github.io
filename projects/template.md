@@ -2,13 +2,13 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
+title: "Template"
 date: 2014
-published: true
+published: false
 labels:
   - Lisp
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "Template."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
