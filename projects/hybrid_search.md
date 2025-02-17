@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/hybrid_search/pg+pgvector.png
 title: "Hybrid search in Postgres"
-date: 2025
+date: 2024
 published: true
 labels:
   - retrieval-augmented-generation 
@@ -18,7 +18,7 @@ summary: "Build a hybrid search system (semantic + keyword search) in postgres t
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/hybrid_search/pg-vector.png" class="img-thumbnail" >
+  <img width="500px" src="../img/hybrid_search/pg-vector.png" class="img-thumbnail" >
 </div>
 
 This work offers a comprehensive setup for implementing a hybrid search system that emphasizes recency in search results using postgres. In many real-world scenarios, retrieving the most recent information is crucial, especially in dynamic domains like news, social media, or stock market data. This system is designed to balance relevance and freshness, ensuring that users receive the latest and most pertinent results.

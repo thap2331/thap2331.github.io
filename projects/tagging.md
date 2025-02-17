@@ -1,8 +1,8 @@
 ---
 layout: project
 type: project
-image: img/hybrid_search/pg+pgvector.png
-title: "Hybrid search in Postgres"
+image: img/rehab_tags/vector.jpg
+title: "Efficient classification with vector embeddings"
 date: 2025
 published: true
 labels:
@@ -14,16 +14,24 @@ labels:
   - docker
   - hybrid-search 
   - add-recency-in-hybrid-search
-summary: "Build a hybrid search system (semantic + keyword search) in postgres that prioritizes recency, making it ideal for dynamic domains like news and social media. It leverages PostgreSQL's pgvector extension to enable efficient vector search within the database, ensuring a balance between relevance and freshness in retrieval-augmented generation (RAG) applications."
+summary: "This project enables automatic text classification using Large Language Models (LLMs), eliminating the need for traditional model-building approaches. It classifies any given text into predefined categories, making it particularly useful for organizing house renovation or rehabilitation expenses."
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/hybrid_search/pg-vector.png" class="img-thumbnail" >
+  <img width="400px" src="../img/rehab_tags/vector3.png" class="img-thumbnail" >
+  <img width="400px" src="../img/rehab_tags/vector2.png" class="img-thumbnail" >
 </div>
 
-This work offers a comprehensive setup for implementing a hybrid search system that emphasizes recency in search results using postgres. In many real-world scenarios, retrieving the most recent information is crucial, especially in dynamic domains like news, social media, or stock market data. This system is designed to balance relevance and freshness, ensuring that users receive the latest and most pertinent results.
 
-The solution leverages PostgreSQL's pgvector extension, which allows for efficient handling of vector data within the database. By integrating vector search capabilities directly into PostgreSQL, this setup facilitates seamless interactions with vector databases.
+With the advent of LLMs, manual tagging and classification have become obsolete. This project simplifies text classification by leveraging embeddings and similarity scoring to categorize data efficiently. The primary use case here is for home renovation, where receipts or text descriptions of expenses need to be classified into categories such as kitchen, bathroom, living room, driveway, or yard.
 
+The approach involves the following steps:
 
-Replicate or read more [here](https://github.com/thap2331/hybrid_search_with_recency).
+- **Embedding Storage**: Generate and store vector embeddings for predefined categories.
+- **Text Processing**: Convert the given text into an embedding representation.
+- **Cosine Similarity Matching**: Compare the text embedding against stored category embeddings.
+- **Category Assignment**: Assign the text to the category with the highest similarity score.
+
+This setup ensures a scalable, efficient, and automated classification process without the need for complex model training. By simply updating or modifying the predefined categories, the system remains flexible and adaptable to various classification needs.
+
+Replicate or read more [here](https://github.com/thap2331/hybrid_search_with_recency){:target="_blank" rel="noopener"}.
