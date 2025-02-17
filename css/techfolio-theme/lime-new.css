@@ -1,0 +1,115 @@
+/* Lime Theme: modifies the default theme to inject a wee bit o' green in various places. */
+
+/* Use Open Sans as the default font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+/* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
+:root {
+  --tf-green1: #101110;
+  --tf-green2: #80b980;
+  --tf-green3: #85C285;
+  --tf-green4: #eef7f1;
+  --bs-font-sans-serif: "Trebuchet MS", sans-serif;
+  --bs-link-color: var(--tf-green1);
+  --tf-pill-bg: var(--tf-green3);
+  --tf-icon-fill: var(--tf-green1);
+  --tf-icon-hover: var(--tf-green2);
+  --tf-page-bg-color: var(--bs-white);
+  --tf-footer-bg-color: var(--tf-green4);
+  --tf-projects-bg-color: var(--tf-green4);
+}
+
+h1,h2,h3,h4,h5 {
+  color: var(--tf-green1);
+}
+
+/* Format social media icons */
+.tf-social {
+  display: inline-block;
+  fill: var(--tf-green1);
+  height: 1.5em;
+  vertical-align: -.1em;
+  width: 1.5em;
+  transition: 0.2s;
+}
+
+.tf-social:hover {
+  fill: var(--tf-icon-hover);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-brand-mobile {
+    display: inline;
+  }
+}
+
+/* Simplify the styling of the bottom of Essay cards. */
+.card-footer {
+  background-color: var(--bs-white);
+  border-top: none;
+}
+
+.post {
+  &__content {
+    max-width: 60%;
+    margin: auto;
+    padding-bottom: 5%;
+    p {
+      font-size: 2rem;
+      line-height: 1.75rem;
+      margin-bottom: 0.875rem;
+
+    }
+    
+    h2 {
+      font-size: 1.625rem; 
+      line-height: 2rem; 
+    }
+    
+    h3 {
+      font-size: 1.375rem; 
+      line-height: 1.75rem; 
+    }
+
+    figure>img, video, .twitter-tweet {
+      display:block;
+      margin:auto;
+      max-width:90%;
+    }
+
+    figure>img, video {
+      box-shadow: 0px 0px 2px gray;
+    }
+
+    figure>figcaption {
+      max-width: 41.5rem;
+      margin: auto;
+    }
+
+    pre {
+      max-width: 41.5rem;
+      margin: 0 auto !important;
+    }
+  }
+
+  &__title, &__description, &__byline {
+    padding-bottom:20px;
+    width:50%;
+    margin:auto;
+
+  }
+  &__image > img {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    width: 50%;
+  }
+}
