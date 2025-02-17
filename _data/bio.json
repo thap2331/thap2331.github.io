@@ -2,36 +2,37 @@
   "basics": {
     "name": "Suraj Thapa",
     "label": "ML Engineer | MLops Engineer",
-    "picture": "./suraj-profile.jpeg",
+    "picture": "./_data/suraj-profile.jpeg",
     "email": "surazmah@gmail.com",
     "phone": "208-310-4215",
     "website": "https://thap2331.github.io",
     "summary": "I am a Machine Learning Enginner who is very passionate about solving business problems using technology.",
-    "location": { "address": "", "postalCode": "63117", "city": "St. Louis", "countryCode": "USA", "region": "Missouri" },
+    "location": { "address": "", "postalCode": "", "city": "St. Louis", "countryCode": "", "region": "Missouri" },
     "profiles": [
-      { "network": "github", "username": "thap2331", "url": "https://github.com/thap2331" },
-      { "network": "linkedin", "username": "suraj", "url": "https://www.linkedin.com/in/suraj-thapa-working-for-community/" }
+      { "network": "github", "username": "GitHub", "url": "https://github.com/thap2331" },
+      { "network": "linkedin", "username": "LinkedIn", "url": "https://www.linkedin.com/in/suraj-thapa-working-for-community/" }
     ]
   },
   "interests": [
     { "name": "Machine Learning" },
+    { "name": "MLOps" },
     { "name": "LLMs/RAGs/Fine tuning LLMs/NLP/" },
     { "name": "Computer Vision" }
   ],
   "skills": [
-    {
-      "name": "Languages and Frameworks",
-      "keywords": [ "Python", "Bash"]
-    },
-    {
-      "name": "Toolsets",
-      "keywords": [ "Ubuntu", "Git/GitHub/GitLab" ]
-    }
-  ],
+    {"name":"Languages","keywords":["Python","Bash","Scala","R"]},
+    {"name":"LLM Experiences","keywords":["Retrieval-augmented generation (RAG)","Fine tuning","OpenAI","Cohere","Gemini","Agent Builder","Weaviate","GPT APIs","Langchain","Streamlit","LLamaindex","Huggingface"]},
+    {"name":"Database","keywords":["PostgreSQL (pgvector)","Weaviate","MySQL","CrateDB","MongoDB"]},
+    {"name":"AWS","keywords":["AWS Bedrock","AWS Sagemaker"]},
+    {"name":"GCP","keywords":["Document AI","Vertex AI","Agent Builder"]},
+    {"name":"Git","keywords":["GitHub","GitLab","CI/CD pipelines"]},
+    {"name":"Infrastructure as Code","keywords":["Terraform","Cloudformation"]},{"name":"Observability Tools","keywords":["Sentry","New Relic","Papertrail"]},{"name":"Containerization","keywords":["Docker","Kubernetes","ECS","EKS"]},
+    {"name":"Other Experiences","keywords":["scikit-learn","pyTorch","NumPy","Pandas","Linux","Ansible","Docker","Web","Kafka","RabbitMQ","AirFlow","Databricks","Web scraping","Jira"]}]
+  ,
   "education": [
     {
       "institution": "University of Denver, Denver, CO",
-      "area": "Global Economic Affairs (2021)",
+      "area": "Global Economic Affairs",
       "studyType": "M.A.",
       "startDate": "2018-08-01",
       "endDate": "2021-05-01",
@@ -40,10 +41,10 @@
     },
     {
       "institution": "University of Idaho, Moscow, ID",
-      "area": "Bachelor in Economics; Minor in Math and Statistics (May, 2018)",
+      "area": "Bachelor in Economics; Minor in Math and Statistics",
       "studyType": "B.A.",
-      "startDate": "2018-08-01",
-      "endDate": "2021-08-01",
+      "startDate": "2015-08-01",
+      "endDate": "2018-05-01",
       "courses": [
       ]
     }
@@ -52,72 +53,34 @@
     {
       "company": "The Texas Tribune",
       "position": "Machine Learning Engineer",
-      "website": "https://www.texastribune.org/",
-      "startDate": "2015-08-01",
+      "website": "https://www.texastribune.org",
+      "startDate": "2022-12-01",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
-      "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
-      ]
-    },
-    {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
       "summary": "",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
+        "Developed AI-powered chatbots adhering to journalistic standards, ensuring accuracy and minimizing hallucinations.",
+        "Implemented hybrid search systems using PostgreSQL for internal applications, integrating semantic, fuzzy, and full-text search for Retrieval-Augmented Generation (RAG).",
+        "Designed a cross-encoder re-ranker for RAG applications, significantly improving document retrieval accuracy and relevance.",
+        "Fine-tuned transformer models (e.g., BERT for Named Entity Recognition) from Hugging Face for internal applications.",
+        "Designed and managed scalable ML infrastructure for model training, testing, and deployment in cloud-native environments.",
+        "Created automated CI/CD pipelines for ML workflows, including data ingestion, feature engineering, model training, validation, and deployment on AWS and GCP.",
+        "Established observability frameworks for end-to-end monitoring of model performance, data quality, and system reliability.",
+        "Implemented infrastructure-as-code (IaC) solutions using Terraform and CloudFormation to maintain reproducible, version-controlled production environments."
       ]
     },
     {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
+      "company": "Lightcast",
+      "position": "Data Engineer II",
+      "website": "https://lightcast.io",
+      "startDate": "2021-06-01",
+      "endDate": "2022-11-15",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Built Machine Learning Models to classify web pages to enhance web scraping capabilities",
+        "Implemented and maintained GitLab CI/CD workflows and Code Deploy (AWS) using container services in GitLab",
+        "Performed data migration from Crate database to AWS RDS, PostgreSQL",
+        "Utilized docker to build and deploy applications"
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
-    },
-    {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
-    }
-  ],
-  "references": [
-    {
-      "name": "Available upon request"
     }
   ]
 }
