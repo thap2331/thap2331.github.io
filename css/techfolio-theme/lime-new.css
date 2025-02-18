@@ -5,7 +5,7 @@
 
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
-  --tf-green1: #101110;
+  --tf-green1: #151615;
   --tf-green2: #80b980;
   --tf-green3: #85C285;
   --tf-green4: #eef7f1;
@@ -38,7 +38,8 @@ h1,h2,h3,h4,h5 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline blue;
+  color: blue;
 }
 
 @media (max-width: 500px) {
@@ -55,61 +56,4 @@ a {
 .card-footer {
   background-color: var(--bs-white);
   border-top: none;
-}
-
-.post {
-  &__content {
-    max-width: 60%;
-    margin: auto;
-    padding-bottom: 5%;
-    p {
-      font-size: 2rem;
-      line-height: 1.75rem;
-      margin-bottom: 0.875rem;
-
-    }
-    
-    h2 {
-      font-size: 1.625rem; 
-      line-height: 2rem; 
-    }
-    
-    h3 {
-      font-size: 1.375rem; 
-      line-height: 1.75rem; 
-    }
-
-    figure>img, video, .twitter-tweet {
-      display:block;
-      margin:auto;
-      max-width:90%;
-    }
-
-    figure>img, video {
-      box-shadow: 0px 0px 2px gray;
-    }
-
-    figure>figcaption {
-      max-width: 41.5rem;
-      margin: auto;
-    }
-
-    pre {
-      max-width: 41.5rem;
-      margin: 0 auto !important;
-    }
-  }
-
-  &__title, &__description, &__byline {
-    padding-bottom:20px;
-    width:50%;
-    margin:auto;
-
-  }
-  &__image > img {
-    display: block;
-    margin: auto;
-    padding-top: 10px;
-    width: 50%;
-  }
 }

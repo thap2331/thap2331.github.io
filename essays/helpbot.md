@@ -52,7 +52,9 @@ We tested Google Cloud's Agent Builder, and while it was easy to set up and inte
 We turned to AWS for a more custom solution and found exactly what we needed with AWS Bedrock. It provided greater control over how we work with different models and parameters, offering the flexibility we were looking for.
 
 #### How does this work?
-We leverage AWS Bedrock to interact with LLM models and integrate Slack via AWS Lambda. Let’s walk through the figure below to understand the process. A user asks a question in Slack, and the Lambda function sends it to Amazon Bedrock, which processes the query and returns the response to Slack. For more details on this integration, check out the AWS Machine Learning [blog](https://aws.amazon.com/blogs/machine-learning/deploy-a-slack-gateway-for-amazon-bedrock/) (the image below is sourced from that blog).
+<aws-bedrock-integration>
+  We leverage AWS Bedrock to interact with LLM models and integrate Slack via AWS Lambda. Let’s walk through the figure below to understand the process. A user asks a question in Slack, and the Lambda function sends it to Amazon Bedrock, which processes the query and returns the response to Slack. For more details on this integration, check out the <a href="https://aws.amazon.com/blogs/machine-learning/deploy-a-slack-gateway-for-amazon-bedrock/">AWS Machine Learning blog</a> (the image below is sourced from that blog).
+</aws-bedrock-integration>
 
 <br>
 <figure>
@@ -119,4 +121,5 @@ The helpbot is a very simple, yet powerful, tool we have built. This was great b
 <i>Thank you to Ashley Hebler and Darla Cameron for bringing these ideas and helping me throughout the process. It’s been a real treat to bring this to life and learn together from it. And thank you to all the users who patiently waited for this tool to get better and provided consistent feedback!</i>
 
 <br>
+
 Republished from [engineering blog](https://texastribune.github.io/eng_posts/2024-09-24/){:target="_blank" rel="noopener"} at The Texas tribune.
