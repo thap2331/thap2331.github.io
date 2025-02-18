@@ -7,7 +7,7 @@
 :root {
   --tf-green1: #151615;
   --tf-green2: #80b980;
-  --tf-green3: #85C285;
+  --tf-green3: #af6ebc;
   --tf-green4: #eef7f1;
   --bs-font-sans-serif: "Trebuchet MS", sans-serif;
   --bs-link-color: var(--tf-green1);
@@ -16,7 +16,7 @@
   --tf-icon-hover: var(--tf-green2);
   --tf-page-bg-color: var(--bs-white);
   --tf-footer-bg-color: var(--tf-green4);
-  --tf-projects-bg-color: var(--tf-green4);
+  --tf-projects-bg-color: var(--bs-white);
 }
 
 h1,h2,h3,h4,h5 {
