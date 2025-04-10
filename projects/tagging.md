@@ -39,4 +39,4 @@ The approach involves the following steps:
 
 This setup ensures a scalable, efficient, and automated classification process without the need for complex model training. By simply updating or modifying the predefined categories, the system remains flexible and adaptable to various classification needs.
 
-Replicate or read more [here](https://github.com/thap2331/hybrid_search_with_recency){:target="_blank" rel="noopener"}.
+Replicate or read more [here](https://github.com/thap2331/rehab_tagging_using_embeddings){:target="_blank" rel="noopener"}.
