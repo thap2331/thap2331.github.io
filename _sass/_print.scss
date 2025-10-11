@@ -1,0 +1,54 @@
+---
+---
+
+@media print {
+  nav, 
+  .hamburger-icon,
+  .btn,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    padding: 0;
+    background: white;
+    color: $text-color;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-card,
+  .essay-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid $border-color;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .project-labels,
+  .essay-date {
+    color: $light-text !important;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: $text-color !important;
+
+    &[href]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.8em;
+      color: $light-text;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $base-spacing * 2 $base-spacing;
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-bottom: $base-spacing * 2;
+  color: $text-color;
+  text-align: center;
+}
+
+.display-4 {
+  padding-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: $light-font-weight;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border: none;
+  padding: $base-spacing * 0.5 $base-spacing * 1.5;
+  border-radius: $button-radius;
+  color: $white;
+  transition: all $transition-duration $transition-timing;
+
+  &:hover {
+    background-color: $hover-primary;
+    transform: translateY(-2px);
+  }
+}
+
+.img-thumbnail {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 5px;
+  background-color: $white;
+  box-shadow: $light-shadow;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-4 {
+  padding: $card-padding;
+}

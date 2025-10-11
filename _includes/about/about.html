@@ -1,22 +1,25 @@
-<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
+<div class="about">
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
+        <div class="bio-header">
+          <img src="{{ site.data.bio.basics.picture }}" class="bio-image" alt="{{ site.data.bio.basics.name }}">
+        </div>
       </div>
       <div class="col-lg-8">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
-        <p class="lead">{{ site.data.bio.basics.summary }}</p>
-        <hr class="my-4">
-        <p class="lead m-0">
-          Interests:
-          {% for interest in site.data.bio.interests %}
-          {{ interest.name }}{% if forloop.last != true %}, {% endif %}
-          {% endfor %}
-        </p>
-        <hr class="my-4">
-        <div class="row">
+        <div class="bio-content">
+          <h1 class="display-4">{{ site.data.bio.basics.name }}</h1>
+          <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
+          <p class="lead">{{ site.data.bio.basics.summary }}</p>
+          <hr class="my-4">
+          <p class="lead m-0">
+            Interests:
+            {% for interest in site.data.bio.interests %}
+            {{ interest.name }}{% if forloop.last != true %}, {% endif %}
+            {% endfor %}
+          </p>
+          <hr class="my-4">
+          <div class="row">
 
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}

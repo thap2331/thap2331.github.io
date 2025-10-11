@@ -1,0 +1,139 @@
+#essays {
+  background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+  padding: 4rem 0;
+
+  .display-4 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, $primary-color, lighten($primary-color, 20%));
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.essay-card {
+  background: white;
+  border-radius: $border-radius;
+  padding: 2rem;
+  box-shadow: $card-shadow;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, $primary-color, lighten($primary-color, 20%));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $hover-shadow;
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .essay-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .essay-date {
+    font-size: 0.9rem;
+    color: $light-text;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::before {
+      content: '📅';
+      font-size: 1rem;
+    }
+  }
+
+  .essay-summary {
+    color: $text-color;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  .project-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    .project-label {
+      padding: 0.25rem 0.75rem;
+      background: rgba($primary-color, 0.1);
+      color: $primary-color;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $primary-color;
+        color: white;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    align-self: center;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+}

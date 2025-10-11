@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $base-font-family;
+  line-height: 1.6;
+  background-color: $background-color;
+  color: $text-color;
+  padding: $base-spacing;
+}
+
+p {
+  color: $light-text;
+  margin-bottom: 1em;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: all $transition-duration $transition-timing;
+
+  &:hover {
+    color: $grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: $light-grey;
+  }
+}

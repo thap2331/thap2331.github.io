@@ -1,0 +1,54 @@
+.projects {
+  @include section-padding;
+  background-color: $white;
+}
+
+.project-card {
+  @include card-base;
+  @include hover-lift;
+  margin-bottom: $base-spacing * 2;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.project-content {
+  padding: $card-padding;
+}
+
+.project-title {
+  font-size: $large-font-size;
+  color: $text-color;
+  margin-bottom: $base-spacing * 0.5;
+}
+
+.project-summary {
+  color: $lighter-text;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $base-spacing * 0.5;
+  margin-top: $base-spacing;
+}
+
+.project-label {
+  background: $background-color;
+  padding: 0.25rem 0.75rem;
+  border-radius: $label-radius;
+  font-size: $small-font-size;
+  color: $lighter-text;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius;
+}

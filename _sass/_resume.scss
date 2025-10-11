@@ -1,0 +1,276 @@
+// Resume styles
+.resume-page {
+  background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+  padding: 2rem 0;
+
+  .container {
+    max-width: 1000px;
+  }
+
+  // Header styling
+  .header {
+    position: relative;
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid $primary-color;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $text-color;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  // Contact info styling
+  .contact-info {
+    background: white;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    box-shadow: $card-shadow;
+    margin-bottom: 2rem;
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background: #f8f9fa;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: $primary-color;
+          color: white;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  // Section styling
+  .resume-section {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $primary-color;
+        margin: 0;
+        position: relative;
+        padding-left: 1rem;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: -5px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 100%;
+          background: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Interests section
+  .interests-list {
+    background: white;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    box-shadow: $card-shadow;
+    margin-bottom: 2rem;
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  // Skills section
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .skill-category {
+      background: linear-gradient(to right, white, #f8f9fa);
+      border-radius: $border-radius;
+      padding: 1.5rem;
+      box-shadow: $card-shadow;
+      flex: 1;
+      min-width: 250px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: $hover-shadow;
+      }
+      
+      h3 {
+        color: $primary-color;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+      
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        
+        span {
+          padding: 0.25rem 0.75rem;
+          background: #f8f9fa;
+          border-radius: 15px;
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            background: $primary-color;
+            color: white;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  // Experience cards
+  .experience-card {
+    background: white;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: $card-shadow;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $hover-shadow;
+    }
+
+    .role-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $text-color;
+      margin-bottom: 0.5rem;
+    }
+
+    .company-name {
+      color: $primary-color;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .date {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.9rem;
+      color: $light-text;
+    }
+
+    .highlights {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        
+        &::before {
+          content: '→';
+          position: absolute;
+          left: -1.2rem;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Education section
+  .education-card {
+    @extend .experience-card;
+    background: linear-gradient(to right, white, #f8f9fa);
+
+    .degree {
+      font-weight: 500;
+      color: $primary-color;
+    }
+
+    .courses {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: $light-text;
+    }
+  }
+
+  // Awards section
+  .awards-list {
+    .award-item {
+      padding: 1rem;
+      border-left: 3px solid $primary-color;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: white;
+        border-radius: 0 $border-radius $border-radius 0;
+        box-shadow: $card-shadow;
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  // Animations
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Print styles override
+  @media print {
+    .resume-section {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    .experience-card,
+    .education-card {
+      box-shadow: none;
+      border: 1px solid #eee;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
