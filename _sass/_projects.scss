@@ -1,6 +1,6 @@
 .projects {
   @include section-padding;
-  background-color: $white;
+  background-color: #FFF8E7;
 }
 
 .project-card {
@@ -52,3 +52,14 @@
   height: auto;
   border-radius: $border-radius;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // take full viewport height
+}
+
+.project-content {
+  flex: 1; // takes up remaining space, pushing footer to bottom
+}
+

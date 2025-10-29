@@ -1,50 +1,59 @@
 <div class="about">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="bio-header">
-          <img src="{{ site.data.bio.basics.picture }}" class="bio-image" alt="{{ site.data.bio.basics.name }}">
+    <div class="row align-items-center min-vh-100">
+
+      <!-- LEFT: Profile Card -->
+      <div class="col-md-5 text-center">
+        <div class="bio-card shadow-lg p-4 ">
+          <img src="{{ site.data.bio.basics.picture }}" class="bio-image rounded-circle mb-3" alt="{{ site.data.bio.basics.name }}">
+          <h3 class="mb-0">{{ site.data.bio.basics.name }}</h3>
+          <p class="text-muted">{{ site.data.bio.basics.label }}</p>
+          <div class="bio-footer">
+            <div class="social-links mt-3">
+              {% if site.data.bio.basics.website %}
+                {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
+                {% include about/social.html url=url name='house' %}
+              {% endif %}
+              {% if site.data.bio.basics.email %}
+                {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
+                {% include about/social.html url=url name='envelope' %}
+              {% endif %}
+              {% for profile in site.data.bio.basics.profiles %}
+                {% capture url %}{{ profile.url }}{% endcapture %}
+                {% capture name %}{{ profile.network | downcase }}{% endcapture %}
+                {% include about/social.html url=url name=name %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-8">
-        <div class="bio-content">
-          <h1 class="display-4">{{ site.data.bio.basics.name }}</h1>
-          <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
+
+      <!-- RIGHT: Main Info -->
+      <div class="col-md-7">
+        <div class="bio-content ps-lg-5">
+          <h1 class="display-3 fw-bold mb-3">Hello</h1>
+          <p class="lead text-muted">Here's who I am & what I do</p>
+          
+          <div class="mb-4">
+            <a href="resume.html" class="btn btn-primary me-3">Resume</a>
+            <a href="{{ '/work/' | relative_url }}" class="btn btn-outline-dark">Projects</a>
+          </div>
+
           <p class="lead">{{ site.data.bio.basics.summary }}</p>
           <hr class="my-4">
-          <p class="lead m-0">
-            Interests:
+
+          <p class="lead">
+            <strong>Interests:</strong>
             {% for interest in site.data.bio.interests %}
-            {{ interest.name }}{% if forloop.last != true %}, {% endif %}
+              {{ interest.name }}{% if forloop.last != true %}, {% endif %}
             {% endfor %}
           </p>
+
           <hr class="my-4">
-          <div class="row">
-
-          {% if site.data.bio.basics.website %}
-            {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='house' %}
-            </div>
-          {% endif %}
-
-          {% if site.data.bio.basics.email %}
-            {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='envelope' %}
-            </div>
-          {% endif %}
-
-          {% for profile in site.data.bio.basics.profiles %}
-            {% capture url %}{{ profile.url }}{% endcapture %}
-            {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name=name %}
-            </div>
-          {% endfor %}
-
+          
         </div>
       </div>
+
     </div>
   </div>
 </div>

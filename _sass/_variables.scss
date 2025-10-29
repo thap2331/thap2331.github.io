@@ -1,15 +1,17 @@
-// Colors
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$background-color: #f4f4f4;
-$text-color: #333;
-$light-text: rgb(85, 85, 85);
-$lighter-text: #666;
-$border-color: #ddd;
-$white: #fff;
-$grey: grey;
-$light-grey: rgb(181, 181, 181);
-$hover-primary: #0056b3;
+// Colors — Cool Blues Palette
+$primary-color: #3F4E4F;          // Deep blue-gray, anchor tone
+$secondary-color: #1B2631;        // Dark navy, for depth and accents
+$background-color: #f4eee8;    // Soft pale blue background
+$text-color: #1B2631;             // Strong readable dark text
+$link-color: #0972d3;             // Vibrant blue for links and highlights
+$light-text: #222b2c;             // Subtle muted blue-gray for secondary text
+$lighter-text: #666;              // Soft highlight or subtext tone                
+$border-color: #f4eee8;          // Gentle neutral for dividers and outlines
+$white: #ffffff;                  // True white for contrast zones
+$grey: #A5C8D6;                   // Light cool blue-grey for hover or muted elements
+$light-grey: #D9E4E0;             // Softer neutral for highlights
+$hover-primary: #2E3C40;          // Slightly darker tone for hover on primary items
+
 
 // Typography
 $base-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

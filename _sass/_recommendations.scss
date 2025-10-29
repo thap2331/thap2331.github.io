@@ -68,23 +68,7 @@
     }
   }
 
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    position: relative;
-    color: var(--text-secondary);
-
-    &::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--text-muted);
-    }
-  }
+  
 
   strong {
     color: var(--text-primary);
@@ -113,3 +97,5 @@
     }
   }
 }
+
+

@@ -1,6 +1,6 @@
 @keyframes slideIn {
   from {
-    transform: translateY(-10px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {
@@ -23,7 +23,7 @@
 }
 
 .project-card, .essay-card {
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.75s ease-out;
 }
 
 .hamburger-icon {

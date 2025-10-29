@@ -22,14 +22,39 @@ p {
 }
 
 a {
+  position: relative;
   color: $text-color;
+  text-decoration: none;
+  transition: color $transition-duration $transition-timing;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem; // adjust to sit nicely under text
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width $transition-duration $transition-timing;
+  }
+
+  &:hover {
+    color: $grey;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.links {
+  color: $link-color;
   text-decoration: none;
   transition: all $transition-duration $transition-timing;
 
   &:hover {
-    color: $grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: $light-grey;
+    &::after {
+      background-color: $link-color;
+    }
   }
 }

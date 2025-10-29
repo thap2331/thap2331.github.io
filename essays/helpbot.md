@@ -53,7 +53,7 @@ We turned to AWS for a more custom solution and found exactly what we needed wit
 
 #### How does this work?
 <aws-bedrock-integration>
-  We leverage AWS Bedrock to interact with LLM models and integrate Slack via AWS Lambda. Let’s walk through the figure below to understand the process. A user asks a question in Slack, and the Lambda function sends it to Amazon Bedrock, which processes the query and returns the response to Slack. For more details on this integration, check out the <a href="https://aws.amazon.com/blogs/machine-learning/deploy-a-slack-gateway-for-amazon-bedrock/">AWS Machine Learning blog</a> (the image below is sourced from that blog).
+  We leverage AWS Bedrock to interact with LLM models and integrate Slack via AWS Lambda. Let’s walk through the figure below to understand the process. A user asks a question in Slack, and the Lambda function sends it to Amazon Bedrock, which processes the query and returns the response to Slack. For more details on this integration, check out the <a href="https://aws.amazon.com/blogs/machine-learning/deploy-a-slack-gateway-for-amazon-bedrock/" class="links">AWS Machine Learning blog</a> (the image below is sourced from that blog).
 </aws-bedrock-integration>
 
 <br>
@@ -64,11 +64,11 @@ We turned to AWS for a more custom solution and found exactly what we needed wit
 <br>
 
 
-To implement a RAG system based solely on our documents, I converted the google documents to pdf, stored the PDF files to S3, and used [AWS Bedrock’s knowledge](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html) base feature for vector data (embeddings). The knowledge base is a managed solution designed to store vector representations of documents, making retrieval fast and efficient.
+To implement a RAG system based solely on our documents, I converted the google documents to pdf, stored the PDF files to S3, and used <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html" class="links">AWS Bedrock’s knowledge</a> base feature for vector data (embeddings). The knowledge base is a managed solution designed to store vector representations of documents, making retrieval fast and efficient.
 
 ##### Models for embedding and text generations
 
-For the embeddings, we used Amazon’s Titan Embeddings G1 - Textv1.2, and opted for a semantic chunking strategy when processing the documents. During initial testing, I found that semantic chunking produced the best results for our use case. Next, I chose Amazon Bedrock's AI agent feature because we wanted a tool similar to Google’s Agent Builder. You can learn more about Agents and their capabilities [here](https://aws.amazon.com/blogs/machine-learning/enabling-complex-generative-ai-applications-with-amazon-bedrock-agents/). One of the key advantages of using Agent is that other team members can easily modify agents directly in the AWS console. Whether it's updating the model, knowledge base, prompts, or parameters, the team has the flexibility to make changes without relying on extensive code updates. Finally, for model selection, I went with Claude 3 Sonnet, which performed exceptionally well for our use case. 
+For the embeddings, we used Amazon’s Titan Embeddings G1 - Textv1.2, and opted for a semantic chunking strategy when processing the documents. During initial testing, I found that semantic chunking produced the best results for our use case. Next, I chose Amazon Bedrock's AI agent feature because we wanted a tool similar to Google’s Agent Builder. You can learn more about Agents and their capabilities <a href="https://aws.amazon.com/blogs/machine-learning/enabling-complex-generative-ai-applications-with-amazon-bedrock-agents/" class="links">here</a>. One of the key advantages of using Agent is that other team members can easily modify agents directly in the AWS console. Whether it's updating the model, knowledge base, prompts, or parameters, the team has the flexibility to make changes without relying on extensive code updates. Finally, for model selection, I went with Claude 3 Sonnet, which performed exceptionally well for our use case. 
 
 To minimize the maintenance, we decided early on to build the serverless infrastructure. I used AWS SAM, which allows us to keep most of the stack in our codebase. This setup includes AWS CloudFormation, Lambda, Secrets Manager, and CloudWatch.
 
@@ -122,4 +122,4 @@ The helpbot is a very simple, yet powerful, tool we have built. This was great b
 
 <br>
 
-Republished from [engineering blog](https://texastribune.github.io/eng_posts/2024-09-24/){:target="_blank" rel="noopener"} at The Texas tribune.
+Republished from <a href="https://texastribune.github.io/eng_posts/2024-09-24/" class="links">engineering blog</a>{:target="_blank" rel="noopener"} at The Texas tribune.
