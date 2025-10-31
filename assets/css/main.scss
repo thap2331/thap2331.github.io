@@ -159,3 +159,11 @@ p {
     }
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.footer {
+  width: 100%; // instead of 100vw
+}
