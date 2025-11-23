@@ -1,0 +1,50 @@
+// Colors — Cool Blues Palette
+$primary-color: #3F4E4F;          // Deep blue-gray, anchor tone
+$secondary-color: #1B2631;        // Dark navy, for depth and accents
+$background-color: #f4eee8;    // Soft pale blue background
+$text-color: #1B2631;             // Strong readable dark text
+$link-color: #0972d3;             // Vibrant blue for links and highlights
+$light-text: #222b2c;             // Subtle muted blue-gray for secondary text
+$lighter-text: #666;              // Soft highlight or subtext tone                
+$border-color: #f4eee8;          // Gentle neutral for dividers and outlines
+$white: #ffffff;                  // True white for contrast zones
+$grey: #A5C8D6;                   // Light cool blue-grey for hover or muted elements
+$light-grey: #D9E4E0;             // Softer neutral for highlights
+$hover-primary: #2E3C40;          // Slightly darker tone for hover on primary items
+
+
+// Typography
+$base-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$base-font-size: 16px;
+$small-font-size: 0.875rem;
+$smaller-font-size: 0.75rem;
+$large-font-size: 1.5rem;
+$heading-font-weight: 600;
+$light-font-weight: 300;
+
+// Spacing
+$base-spacing: 1rem;
+$container-max-width: 1200px;
+$nav-height: 17vh;
+$card-padding: 1.5rem;
+
+// Breakpoints
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// Transitions
+$transition-duration: 300ms;
+$transition-timing: ease;
+
+// Shadows
+$nav-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$card-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+$hover-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+$light-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+// Border Radius
+$border-radius: 8px;
+$rounded-full: 50%;
+$button-radius: 25px;
+$label-radius: 15px;

@@ -14,10 +14,11 @@
   {%- endif -%}
 {%- endif -%}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="{{ title | xml_escape }}">
     <meta name="description" content="{{ description | xml_escape }}">
@@ -32,6 +33,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ site.baseurl}}/css/techfolio-theme/{{ site.techfolio-theme}}">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl}}/css/rouge/{{ site.rouge-theme}}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
     {% if site.mathjax %}
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
@@ -40,8 +42,9 @@
 
     <title>{{ title }}</title>
   </head>
-  <body>
+  <body class="{{ page.layout | downcase }} {% if page.title %}{{ page.title | downcase | replace: ' ', '-' }}{% endif %}">
   {{ content }}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="/js/script.js"></script>
   </body>
 </html>

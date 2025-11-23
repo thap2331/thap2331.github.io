@@ -1,17 +1,23 @@
-<div class="col-md-6 col-lg-4" xmlns="http://www.w3.org/1999/html">
-  <div class="card h-100">
-    <div class="card-body">
-      <h5 class="card-title">{{ include.page.title }}</h5>
-      <p class="card-text"><small class="text-muted">{{ include.page.date | date_to_string }}</small></p>
-      <p class="card-text">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
-      <p>
+<div class="col-md-6 col-lg-4 mb-4">
+  <div class="essay-card">
+    <div class="card-content">
+      <h3 class="essay-title">
+        <a href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}">
+          {{ include.page.title }}
+        </a>
+      </h3>
+      <p class="essay-date">{{ include.page.date | date: "%B %d, %Y" }}</p>
+      <p class="essay-summary">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
+      {% if include.page.labels %}
+      <div class="project-labels">
         {% for label in include.page.labels %}
-        <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
+        <span class="project-label">{{ label }}</span>
         {% endfor %}
-      </p>
+      </div>
+      {% endif %}
     </div>
-    <div class="card-footer">
-      <div class="text-center"><a href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a></div>
+    <div class="text-center mt-auto">
+      <a href="{% if page.essayurl %}{{ page.essayurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-primary">Read More</a>
     </div>
   </div>
 </div>

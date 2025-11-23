@@ -1,0 +1,85 @@
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@include tablet {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .container {
+    padding: $base-spacing;
+  }
+
+  .projects, .essays, .about {
+    padding: $base-spacing * 1.5 0;
+  }
+
+  .section-header {
+    font-size: 1.75rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .project-card, .essay-card {
+    margin-bottom: $base-spacing * 1.5;
+  }
+
+  .project-content {
+    padding: $base-spacing;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .bio-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio-content {
+    padding: 0 $base-spacing;
+  }
+}
+
+@include mobile {
+  body {
+    padding: $base-spacing * 0.5;
+  }
+
+  .container {
+    padding: $base-spacing * 0.5;
+  }
+
+  .display-4 {
+    font-size: 1.75rem;
+  }
+
+  .project-labels {
+    gap: $base-spacing * 0.25;
+  }
+
+  .project-label {
+    font-size: $smaller-font-size;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .img-thumbnail {
+    padding: 3px;
+  }
+}

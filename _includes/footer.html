@@ -1,9 +1,18 @@
-<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
-  <div class="container-fluid">
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
-      </ul>
+<footer class="footer">
+  <div class="footer-inner d-flex justify-content-between align-items-center">
+    <div class="footer-left">
+      <a href="https://techfolios.github.io">Made with Techfolios</a>
+    </div>
+
+    <div class="footer-right d-flex gap-3">
+      {% for profile in site.data.bio.basics.profiles %}
+        <a href="{{ profile.url }}" target="_blank">
+          <svg class="tf-social">
+            <use xlink:href="{{ '/img/bootstrap-icons.svg' | prepend: site.baseurl }}#{{- profile.network | downcase -}}" />
+          </svg>
+          <span>{{ profile.network }}</span>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </footer>

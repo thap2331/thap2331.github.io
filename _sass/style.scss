@@ -1,0 +1,111 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Import local files
+@import "modern-variables";
+@import "modern-home";
+
+// Reset and Base Styles
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-primary;
+  color: $text-dark;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+// Utility Classes
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+// Button Styles
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 30px;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-base;
+  font-weight: 600;
+  text-decoration: none;
+  transition: $transition-base;
+  cursor: pointer;
+  border: 2px solid;
+  
+  &.btn-primary {
+    background: $primary-color;
+    color: $white;
+    border-color: $primary-color;
+    
+    &:hover {
+      background: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+      box-shadow: $shadow-hover;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.btn-secondary {
+    background: $white;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    
+    &:hover {
+      background: $secondary-color;
+      color: $white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Animation Classes
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Print Styles
+@media print {
+  .no-print {
+    display: none;
+  }
+}

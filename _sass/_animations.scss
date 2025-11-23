@@ -1,0 +1,43 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-links {
+  animation: slideIn 0.3s ease-out;
+}
+
+.project-card, .essay-card {
+  animation: fadeIn 0.75s ease-out;
+}
+
+.hamburger-icon {
+  &.active {
+    div {
+      &:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    }
+  }
+}

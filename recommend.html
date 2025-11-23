@@ -3,215 +3,58 @@ title: Recommendations
 layout: home
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorites</title>
-    <style>
-        :root {
-            --primary-color: #4F46E5;
-            --bg-color: #FAFAFA;
-            --card-bg: #FFFFFF;
-            --text-primary: #333333;
-            --text-secondary: #666666;
-            --text-muted: #888888;
-            --spacing: 1.5rem;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: var(--spacing);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 var(--spacing);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-primary);
-            letter-spacing: -0.5px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 3rem 0 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.25rem;
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .card-header span {
-            font-size: 1.25rem;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            position: relative;
-            color: var(--text-secondary);
-        }
-
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--text-muted);
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s ease;
-            font-weight: 500;
-        }
-
-        a:hover {
-            color: #6366F1;
-        }
-
-        strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .card {
-                padding: 1.25rem;
-            }
-
-            .section-title {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>My Favourites</h1>
-        
-        <div class="section">
-            <h2 class="section-title">Machine Learning</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-header">
-                        <span>📚</span> Technical Books
-                    </div>
-                    <ul>
-                        <li><strong>Deep Learning</strong> - By Ian Goodfellow</li>
-                        <li><strong>Machine Learning Yearning</strong> - By Andrew Ng</li>
-                        <li><strong>Hands-On Machine Learning</strong> - By Aurélien Géron</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <span>🎙️</span> Podcasts
-                    </div>
-                    <ul>
-                        <li><a href="https://lastweekin.ai/" target="_blank">Last week in AI</a> - Weekly AI</li>
-                        <li><a href="https://www.superdatascience.com/" target="_blank">Super data science</a> - Super data science</li>
-                    </ul>
-                </div>
-            </div>
+<div class="recommendations">
+  <div class="container">
+    <h1>My Favourites</h1>
+    
+    <div class="section">
+      <h2 class="section-title">Machine Learning</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <span>📚</span> Technical Books
+          </div>
+          <ul>
+            <li><strong>Deep Learning</strong> - By Ian Goodfellow</li>
+            <li><strong>Machine Learning Yearning</strong> - By Andrew Ng</li>
+            <li><strong>Hands-On Machine Learning</strong> - By Aurélien Géron</li>
+          </ul>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Other recommendations</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-header">
-                        <span>📚</span> Personal Development Books
-                    </div>
-                    <ul>
-                        <li><strong>Atomic Habits</strong> - By James Clear</li>
-                        <li><strong>Deep Work</strong> - By Cal Newport</li>
-                    </ul>
-                </div>
-
-                <!-- <div class="card">
-                    <div class="card-header">
-                        <span>🎧</span> Podcasts
-                    </div>
-                    <ul>
-                        <li><strong>The Knowledge Project</strong> - Learning from top thinkers</li>
-                        <li><strong>Tim Ferriss Show</strong> - Tools for personal growth</li>
-                        <li><strong>Hidden Brain</strong> - Psychology and human behavior</li>
-                    </ul>
-                </div> -->
-
-                <div class="card">
-                    <div class="card-header">
-                        <span>🎥</span> Educational Channels
-                    </div>
-                    <ul>
-                        <li><a href="https://www.youtube.com/c/3blue1brown" target="_blank">3Blue1Brown</a> Mathemetics made digestible</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <span>🎙️</span> Podcasts
+          </div>
+          <ul>
+            <li><a href="https://lastweekin.ai/" class="links" target="_blank">Last week in AI</a> - Weekly AI</li>
+            <li><a href="https://www.superdatascience.com/" class="links" target="_blank">Super data science</a> - Super data science</li>
+          </ul>
         </div>
+      </div>
     </div>
-</body>
-</html>
+
+    <div class="section">
+      <h2 class="section-title">Other recommendations</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <span>📚</span> Personal Development Books
+          </div>
+          <ul>
+            <li><strong>Atomic Habits</strong> - By James Clear</li>
+            <li><strong>Deep Work</strong> - By Cal Newport</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span></span> Educational Channels
+          </div>
+          <ul>
+            <li><a href="https://www.youtube.com/c/3blue1brown" class="links" target="_blank">3Blue1Brown</a> Mathemetics made digestible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,169 @@
+---
+---
+
+
+@import "variables";
+@import "mixins";
+@import "base";
+@import "navigation";
+@import "projects";
+@import "essays";
+@import "about";
+@import "utilities";
+@import "animations";
+@import "recommendations";
+@import "resume";
+@import "responsive";
+@import "footer";
+
+// Print styles
+@media print {
+  nav, 
+  .hamburger-icon,
+  .btn,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    padding: 0;
+    background: white;
+    color: #000;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-card,
+  .essay-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .project-labels,
+  .essay-date {
+    color: #666 !important;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+
+    &[href]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.8em;
+      color: #666;
+    }
+  }
+} 
+
+body {
+  font-family: $base-font-family;
+  line-height: 1.6;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $heading-font-weight;
+  margin-bottom: $base-spacing;
+}
+
+p {
+  margin-bottom: $base-spacing;
+  color: $light-text;
+}
+
+// Layout
+.container {
+  @include container;
+}
+
+// Projects
+.projects {
+  @include section-padding;
+  background-color: #fff;
+
+  .project-card {
+    @include card-base;
+    @include hover-lift;
+    margin-bottom: $base-spacing * 2;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: $base-spacing * 1.5;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      color: $text-color;
+      margin-bottom: $base-spacing * 0.5;
+    }
+
+    .project-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $base-spacing * 0.5;
+      margin-top: $base-spacing;
+
+      .project-label {
+        background: $background-color;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.875rem;
+        color: $light-text;
+      }
+    }
+  }
+}
+
+// Essays
+.essays {
+  @include section-padding;
+  background-color: $background-color;
+
+  .essay-card {
+    @include card-base;
+    @include hover-lift;
+    padding: $base-spacing * 1.5;
+    margin-bottom: $base-spacing * 2;
+
+    .essay-title {
+      font-size: 1.4rem;
+      margin-bottom: $base-spacing;
+    }
+
+    .essay-date {
+      color: $secondary-color;
+      font-size: 0.9rem;
+      margin-bottom: $base-spacing * 0.5;
+    }
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.footer {
+  width: 100%; // instead of 100vw
+}

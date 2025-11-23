@@ -19,6 +19,11 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 strict_front_matter: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
 mathjax: true
 exclude:
   - Gemfile
